@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vizence Data</title>
+
+  <!-- SEO Metadata -->
+  <meta name="description" content="Vizence Data helps dental practices eliminate spreadsheets through automation, custom dashboards, and real-time reporting built with SQL and Tableau." />
+  <meta name="keywords" content="Vizence, dental analytics, automation, dashboards, Tableau, SQL Server, custom reporting, no spreadsheets" />
+  <meta name="author" content="Vizence Data" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -17,7 +23,7 @@
       --text-light: #f8f9fa;
       --card-bg: #ffffff;
       --shadow-color: rgba(0, 82, 136, 0.1);
-      --hover-shadow-color: rgba(0, 82, 136, 0.25); /* Stronger shadow on hover */
+      --hover-shadow-color: rgba(0, 82, 136, 0.25);
     }
 
     * {
@@ -80,14 +86,14 @@
       transform: translateY(20px);
       animation: fadeIn 0.6s ease-out forwards;
     }
-    
+
     @keyframes fadeIn {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    
+
     section:nth-child(1) { animation-delay: 0.1s; }
     section:nth-child(2) { animation-delay: 0.2s; }
     section:nth-child(3) { animation-delay: 0.3s; }
@@ -129,28 +135,28 @@
       background-color: #f9f9f9;
       border-radius: 8px;
     }
-    
+
     .how-it-works-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 2rem;
-        text-align: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      text-align: center;
     }
 
     .step {
-        padding: 1.5rem;
-        border: 1px solid #ddd;
-        border-radius: 8px;
+      padding: 1.5rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
     }
 
     .step h3 {
-        color: var(--primary-color);
-        margin-bottom: 0.5rem;
-        font-family: 'Poppins', sans-serif;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+      font-family: 'Poppins', sans-serif;
     }
 
     .contact p {
-        text-align: center;
+      text-align: center;
     }
 
     .contact a {
@@ -160,10 +166,10 @@
       transition: color 0.2s ease;
     }
     .contact a:hover {
-        color: var(--primary-color);
-        text-decoration: underline;
+      color: var(--primary-color);
+      text-decoration: underline;
     }
-    
+
     footer {
       text-align: center;
       font-size: 0.9rem;
@@ -176,19 +182,17 @@
 <body>
   <header>
     <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:var(--primary-color); stop-opacity:1" />
-                <stop offset="100%" style="stop-color:var(--secondary-color); stop-opacity:1" />
-            </linearGradient>
-        </defs>
-        
-        <line x1="15" y1="20" x2="50" y2="80" stroke="url(#logoGradient)" stroke-width="10" stroke-linecap="round"/>
-        <line x1="85" y1="20" x2="50" y2="80" stroke="url(#logoGradient)" stroke-width="10" stroke-linecap="round"/>
-        
-        <circle cx="15" cy="20" r="8" fill="var(--text-light)"/>
-        <circle cx="85" cy="20" r="8" fill="var(--text-light)"/>
-        <circle cx="50" cy="80" r="8" fill="var(--text-light)"/>
+      <defs>
+        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:var(--primary-color); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:var(--secondary-color); stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <line x1="15" y1="20" x2="50" y2="80" stroke="url(#logoGradient)" stroke-width="10" stroke-linecap="round"/>
+      <line x1="85" y1="20" x2="50" y2="80" stroke="url(#logoGradient)" stroke-width="10" stroke-linecap="round"/>
+      <circle cx="15" cy="20" r="8" fill="var(--text-light)"/>
+      <circle cx="85" cy="20" r="8" fill="var(--text-light)"/>
+      <circle cx="50" cy="80" r="8" fill="var(--text-light)"/>
     </svg>
     <div class="branding">
       <h1>Vizence Data</h1>
@@ -213,21 +217,21 @@
       </ul>
     </section>
     <section>
-        <h2>How It Works</h2>
-        <div class="how-it-works-grid">
-            <div class="step">
-                <h3>1. Discovery</h3>
-                <p>We meet to understand your goals, data sources, and key metrics.</p>
-            </div>
-            <div class="step">
-                <h3>2. Development</h3>
-                <p>We build your custom data pipeline and dashboards using <strong>SQL & Tableau</strong>.</p>
-            </div>
-            <div class="step">
-                <h3>3. Delivery</h3>
-                <p>We deploy the solution and train your team for seamless integration.</p>
-            </div>
+      <h2>How It Works</h2>
+      <div class="how-it-works-grid">
+        <div class="step">
+          <h3>1. Discovery</h3>
+          <p>We meet to understand your goals, data sources, and key metrics.</p>
         </div>
+        <div class="step">
+          <h3>2. Development</h3>
+          <p>We build your custom data pipeline and dashboards using <strong>SQL & Tableau</strong>.</p>
+        </div>
+        <div class="step">
+          <h3>3. Delivery</h3>
+          <p>We deploy the solution and train your team for seamless integration.</p>
+        </div>
+      </div>
     </section>
     <section class="contact">
       <h2>Get In Touch</h2>
