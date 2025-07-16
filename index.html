@@ -11,7 +11,7 @@
     }
     body {
       margin: 0;
-      background: #f4f7fb;
+      background: linear-gradient(180deg, #f4f7fb 0%, #dbe9f4 100%);
       color: #222;
     }
     header {
@@ -55,7 +55,13 @@
       border-radius: 8px;
       padding: 2rem;
       margin-bottom: 2rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
     }
 
     h2 {
@@ -104,12 +110,9 @@
   <header>
     <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
       <circle cx="50" cy="50" r="12" fill="white" />
-      <line x1="50" y1="20" x2="50" y2="35" stroke="white" stroke-width="3"/>
-      <line x1="50" y1="65" x2="50" y2="80" stroke="white" stroke-width="3"/>
-      <line x1="20" y1="50" x2="35" y2="50" stroke="white" stroke-width="3"/>
-      <line x1="65" y1="50" x2="80" y2="50" stroke="white" stroke-width="3"/>
-      <circle cx="40" cy="40" r="3" fill="white" />
-      <circle cx="60" cy="40" r="3" fill="white" />
+      <path d="M 45 50 Q 35 60, 45 70 M 55 50 Q 65 60, 55 70" stroke="white" stroke-width="3" fill="none" />
+      <circle cx="45" cy="70" r="3" fill="white" />
+      <circle cx="55" cy="70" r="3" fill="white" />
     </svg>
     <div class="branding">
       <h1>Vizence Data</h1>
