@@ -183,14 +183,17 @@
   <header>
     <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <defs>
-            <linearGradient id="logoGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient id="logoGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" style="stop-color:var(--primary-color); stop-opacity:1" />
                 <stop offset="100%" style="stop-color:var(--secondary-color); stop-opacity:1" />
             </linearGradient>
         </defs>
-        <path d="M15 50 L50 90 L85 50 L75 50 L50 75 L25 50 Z" fill="url(#logoGradient1)"/>
-        <circle cx="50" cy="20" r="8" fill="var(--text-light)"/>
-        <line x1="50" y1="28" x2="50" y2="45" stroke="var(--text-light)" stroke-width="4" stroke-linecap="round"/>
+        <rect x="15" y="15" width="70" height="70" rx="10" fill="url(#logoGradient2)"/>
+        <rect x="30" y="30" width="15" height="15" rx="3" fill="var(--text-light)"/>
+        <rect x="55" y="30" width="15" height="15" rx="3" fill="var(--text-light)"/>
+        <rect x="30" y="55" width="15" height="15" rx="3" fill="var(--text-light)"/>
+        <rect x="55" y="55" width="15" height="15" rx="3" fill="var(--text-light)"/>
+        <polygon points="50,10 60,25 50,40 40,25" fill="var(--text-light)"/>
     </svg>
     <div class="branding">
       <h1>Vizence Data</h1>
