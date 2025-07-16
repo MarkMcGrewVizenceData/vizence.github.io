@@ -17,6 +17,7 @@
       --text-light: #f8f9fa;
       --card-bg: #ffffff;
       --shadow-color: rgba(0, 82, 136, 0.1);
+      --hover-shadow-color: rgba(0, 82, 136, 0.25); /* Stronger shadow on hover */
     }
 
     * {
@@ -74,7 +75,7 @@
       padding: 2.5rem;
       margin-bottom: 2.5rem;
       box-shadow: 0 5px 15px var(--shadow-color);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
       opacity: 0;
       transform: translateY(20px);
       animation: fadeIn 0.6s ease-out forwards;
@@ -92,9 +93,10 @@
     section:nth-child(3) { animation-delay: 0.3s; }
     section:nth-child(4) { animation-delay: 0.4s; }
 
+    /* Hover effect for the sections */
     section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px var(--shadow-color);
+      transform: translateY(-8px); /* Move up slightly more to "come out" */
+      box-shadow: 0 15px 30px var(--hover-shadow-color); /* Stronger, diffused shadow */
     }
 
     h2 {
@@ -129,8 +131,6 @@
       border-radius: 8px;
     }
     
-    /* Removed .feature-icon styling as emojis are gone */
-
     .how-it-works-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -184,9 +184,13 @@
             </linearGradient>
         </defs>
         
-        <path d="M15 50 L50 85 L85 50 L70 50 L50 70 L30 50 Z" fill="url(#logoGradient)"/>
+        <path d="M15 40 L50 80 L85 40" stroke="url(#logoGradient)" stroke-width="8" fill="none" stroke-linecap="round"/>
         
-        <path d="M50 15 L58 35 L50 40 L42 35 Z" fill="var(--text-light)"/>
+        <circle cx="50" cy="80" r="7" fill="var(--text-light)"/>
+
+        <circle cx="15" cy="40" r="7" fill="var(--text-light)"/>
+
+        <circle cx="85" cy="40" r="7" fill="var(--text-light)"/>
     </svg>
     <div class="branding">
       <h1>Vizence Data</h1>
