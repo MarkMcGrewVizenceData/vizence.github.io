@@ -20,17 +20,15 @@
       padding: 2rem 1rem 3rem 1rem;
       text-align: center;
     }
-
-    .logo-container svg {
-      max-width: 340px;
+    header svg {
+      display: block;
+      margin: 0 auto 1rem auto;
     }
-
     main {
       max-width: 1000px;
       margin: 0 auto;
       padding: 2rem 1.5rem;
     }
-
     section {
       background: white;
       border-radius: 8px;
@@ -38,39 +36,32 @@
       margin-bottom: 2rem;
       box-shadow: 0 4px 8px rgba(0,0,0,0.04);
     }
-
     h2 {
       color: #005288;
       margin-bottom: 1rem;
       font-size: 1.75rem;
     }
-
     p {
       font-size: 1.05rem;
       line-height: 1.6;
       margin-bottom: 1rem;
     }
-
     ul {
       list-style: none;
       padding-left: 0;
     }
-
     ul li {
       margin: 0.6rem 0;
     }
-
     ul li::before {
       content: "✔";
       color: #005288;
       margin-right: 0.5rem;
     }
-
     .contact a {
       color: #005288;
       text-decoration: none;
     }
-
     footer {
       text-align: center;
       font-size: 0.9rem;
@@ -83,35 +74,20 @@
 <body>
 
   <header>
-    <div class="logo-container">
-      <svg width="340" height="80" viewBox="0 0 340 80" xmlns="http://www.w3.org/2000/svg">
-        <style>
-          .title {
-            font-family: 'Segoe UI', sans-serif;
-            font-weight: 700;
-            font-size: 28px;
-            fill: #ffffff;
-          }
-          .subtitle {
-            font-family: 'Segoe UI', sans-serif;
-            font-size: 14px;
-            fill: #d8eaff;
-          }
-          .circuit {
-            fill: #ffffff;
-          }
-        </style>
-        <g transform="translate(0,10)">
-          <circle class="circuit" cx="20" cy="20" r="10"/>
-          <line x1="20" y1="0" x2="20" y2="40" stroke="#ffffff" stroke-width="2"/>
-          <line x1="0" y1="20" x2="40" y2="20" stroke="#ffffff" stroke-width="2"/>
-          <circle class="circuit" cx="8" cy="8" r="2"/>
-          <circle class="circuit" cx="32" cy="32" r="2"/>
-        </g>
-        <text class="title" x="60" y="30">Vizence Data</text>
-        <text class="subtitle" x="60" y="55">Visual Intelligence, Automation, and Data Analytics</text>
-      </svg>
-    </div>
+    <svg width="320" height="80" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg">
+      <style>
+        .title { font-family: 'Segoe UI', sans-serif; font-weight: 700; font-size: 28px; fill: white; }
+        .subtitle { font-family: 'Segoe UI', sans-serif; font-size: 14px; fill: white; }
+        .gear { fill: white; }
+      </style>
+      <g transform="translate(20,10)">
+        <circle class="gear" cx="20" cy="20" r="10"/>
+        <rect class="gear" x="18" y="5" width="4" height="30" rx="1"/>
+        <rect class="gear" x="5" y="18" width="30" height="4" rx="1"/>
+      </g>
+      <text class="title" x="70" y="35">Vizence Data</text>
+      <text class="subtitle" x="70" y="55">Visual Intelligence, Automation, and Data Analytics</text>
+    </svg>
   </header>
 
   <main>
