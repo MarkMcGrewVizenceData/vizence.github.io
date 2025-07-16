@@ -129,12 +129,7 @@
       border-radius: 8px;
     }
     
-    .feature-icon {
-        font-size: 1.5rem;
-        color: var(--secondary-color);
-        flex-shrink: 0;
-        margin-top: 5px;
-    }
+    /* Removed .feature-icon styling as emojis are gone */
 
     .how-it-works-grid {
         display: grid;
@@ -183,17 +178,15 @@
   <header>
     <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <defs>
-            <linearGradient id="logoGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" style="stop-color:var(--primary-color); stop-opacity:1" />
                 <stop offset="100%" style="stop-color:var(--secondary-color); stop-opacity:1" />
             </linearGradient>
         </defs>
-        <rect x="15" y="15" width="70" height="70" rx="10" fill="url(#logoGradient2)"/>
-        <rect x="30" y="30" width="15" height="15" rx="3" fill="var(--text-light)"/>
-        <rect x="55" y="30" width="15" height="15" rx="3" fill="var(--text-light)"/>
-        <rect x="30" y="55" width="15" height="15" rx="3" fill="var(--text-light)"/>
-        <rect x="55" y="55" width="15" height="15" rx="3" fill="var(--text-light)"/>
-        <polygon points="50,10 60,25 50,40 40,25" fill="var(--text-light)"/>
+        
+        <path d="M15 50 L50 85 L85 50 L70 50 L50 70 L30 50 Z" fill="url(#logoGradient)"/>
+        
+        <path d="M50 15 L58 35 L50 40 L42 35 Z" fill="var(--text-light)"/>
     </svg>
     <div class="branding">
       <h1>Vizence Data</h1>
@@ -211,10 +204,10 @@
     <section>
       <h2>Why Work With Vizence?</h2>
       <ul class="feature-list">
-        <li><span class="feature-icon">✨</span><div><strong>Fully Custom Solutions</strong><br>Databases, dashboards, and KPIs built specifically for your team.</div></li>
-        <li><span class="feature-icon">⚙️</span><div><strong>End-to-End Automation</strong><br>No more downloading spreadsheets, copying, or merging files.</div></li>
-        <li><span class="feature-icon">🦷</span><div><strong>Dental Industry Focus</strong><br>We know how dental practices run and what metrics matter.</div></li>
-        <li><span class="feature-icon">🚀</span><div><strong>Scalable & Reliable</strong><br>No templates, no cookie-cutter tools — just what you actually need.</div></li>
+        <li><div><strong>Fully Custom Solutions</strong><br>Databases, dashboards, and KPIs built specifically for your team.</div></li>
+        <li><div><strong>End-to-End Automation</strong><br>No more downloading spreadsheets, copying, or merging files.</div></li>
+        <li><div><strong>Dental Industry Focus</strong><br>We know how dental practices run and what metrics matter.</div></li>
+        <li><div><strong>Scalable & Reliable</strong><br>No templates, no cookie-cutter tools — just what you actually need.</div></li>
       </ul>
     </section>
     <section>
