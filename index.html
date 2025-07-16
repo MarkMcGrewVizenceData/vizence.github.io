@@ -4,104 +4,187 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vizence Data</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary-color: #005288;
+      --secondary-color: #007BFF;
+      --background-light: #f4f7fb;
+      --background-dark: #dbe9f4;
+      --text-dark: #333;
+      --text-light: #f8f9fa;
+      --card-bg: #ffffff;
+      --shadow-color: rgba(0, 82, 136, 0.1);
+    }
+
     * {
       box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    body {
       margin: 0;
-      background: linear-gradient(180deg, #f4f7fb 0%, #dbe9f4 100%);
-      color: #222;
+      padding: 0;
     }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(180deg, var(--background-light) 0%, var(--background-dark) 100%);
+      color: var(--text-dark);
+      line-height: 1.7;
+    }
+
     header {
-      background: #005288;
-      color: white;
-      padding: 2rem 1rem;
+      background: var(--primary-color);
+      color: var(--text-light);
+      padding: 1.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1rem;
+      text-align: center;
+      gap: 1.5rem;
       flex-wrap: wrap;
-      text-align: left;
     }
+
     .logo {
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
     }
-    .branding {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+
     .branding h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
       margin: 0;
-      font-size: 2.2rem;
     }
+
     .branding p {
-      margin: 0.3rem 0 0;
       font-size: 1rem;
       opacity: 0.9;
+      margin-top: 0.25rem;
     }
+
     main {
       max-width: 1000px;
       margin: 0 auto;
       padding: 2rem 1.5rem;
     }
+
     section {
-      background: white;
-      border-radius: 8px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 2.5rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 5px 15px var(--shadow-color);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.6s ease-out forwards;
     }
+    
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    section:nth-child(1) { animation-delay: 0.1s; }
+    section:nth-child(2) { animation-delay: 0.2s; }
+    section:nth-child(3) { animation-delay: 0.3s; }
+    section:nth-child(4) { animation-delay: 0.4s; }
+
     section:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px var(--shadow-color);
     }
+
     h2 {
-      color: #005288;
-      margin-bottom: 1rem;
-      font-size: 1.75rem;
+      font-family: 'Poppins', sans-serif;
+      color: var(--primary-color);
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      font-weight: 600;
+      text-align: center;
     }
+
     p {
-      font-size: 1.05rem;
-      line-height: 1.6;
+      font-size: 1.1rem;
       margin-bottom: 1rem;
     }
-    ul {
+
+    .feature-list {
       list-style: none;
       padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
     }
-    ul li {
-      margin: 0.6rem 0;
+
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      border-radius: 8px;
     }
-    ul li::before {
-      content: "✔";
-      color: #005288;
-      margin-right: 0.5rem;
+    
+    .feature-icon {
+        font-size: 1.5rem;
+        color: var(--secondary-color);
+        flex-shrink: 0;
+        margin-top: 5px;
     }
+
+    .how-it-works-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .step {
+        padding: 1.5rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .step h3 {
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .contact p {
+        text-align: center;
+    }
+
     .contact a {
-      color: #005288;
+      color: var(--secondary-color);
       text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
     }
+    .contact a:hover {
+        color: var(--primary-color);
+        text-decoration: underline;
+    }
+    
     footer {
       text-align: center;
       font-size: 0.9rem;
       padding: 2rem 1rem;
-      background: #e0e0e0;
-      color: #555;
+      background: #e9ecef;
+      color: #6c757d;
     }
   </style>
 </head>
 <body>
   <header>
     <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <rect x="45" y="15" width="10" height="70" fill="white" rx="2"/>
-      <circle cx="50" cy="85" r="5" fill="white"/>
-      <circle cx="50" cy="10" r="5" fill="white"/>
-      <circle cx="50" cy="40" r="7" fill="white"/>
+      <path d="M50 15 a 5 5 0 0 1 0 -10 a 5 5 0 0 1 0 10 M50 95 a 5 5 0 0 1 0 -10 a 5 5 0 0 1 0 10" fill="white"/>
+      <rect x="45" y="10" width="10" height="80" fill="white" rx="2"/>
+      <circle cx="50" cy="45" r="8" fill="white"/>
     </svg>
     <div class="branding">
       <h1>Vizence Data</h1>
@@ -111,29 +194,39 @@
   <main>
     <section>
       <h2>What We Do</h2>
-      <p>
+      <p style="text-align: center;">
         Vizence helps small dental practices centralize their data, automate reporting, and gain real-time business insights —
         without relying on spreadsheets. Everything we build is custom-fit to your operations.
       </p>
     </section>
     <section>
       <h2>Why Work With Vizence?</h2>
-      <ul>
-        <li><strong>Fully Custom Solutions</strong> – databases, dashboards, and KPIs built specifically for your team</li>
-        <li><strong>End-to-End Automation</strong> – no more downloading spreadsheets, copying, or merging files</li>
-        <li><strong>Dental Industry Focus</strong> – we know how dental practices run and what metrics matter</li>
-        <li><strong>Scalable & Reliable</strong> – no templates, no cookie-cutter tools — just what you actually need</li>
+      <ul class="feature-list">
+        <li><span class="feature-icon">✨</span><div><strong>Fully Custom Solutions</strong><br>Databases, dashboards, and KPIs built specifically for your team.</div></li>
+        <li><span class="feature-icon">⚙️</span><div><strong>End-to-End Automation</strong><br>No more downloading spreadsheets, copying, or merging files.</div></li>
+        <li><span class="feature-icon">🦷</span><div><strong>Dental Industry Focus</strong><br>We know how dental practices run and what metrics matter.</div></li>
+        <li><span class="feature-icon">🚀</span><div><strong>Scalable & Reliable</strong><br>No templates, no cookie-cutter tools — just what you actually need.</div></li>
       </ul>
     </section>
     <section>
-      <h2>How It Works</h2>
-      <p>
-        We use industry-standard tools like <strong>SQL Server (SSMS)</strong> and <strong>Tableau</strong> to build your custom solution.
-        From raw data to clean dashboards — we handle every step.
-      </p>
+        <h2>How It Works</h2>
+        <div class="how-it-works-grid">
+            <div class="step">
+                <h3>1. Discovery</h3>
+                <p>We meet to understand your goals, data sources, and key metrics.</p>
+            </div>
+            <div class="step">
+                <h3>2. Development</h3>
+                <p>We build your custom data pipeline and dashboards using <strong>SQL & Tableau</strong>.</p>
+            </div>
+            <div class="step">
+                <h3>3. Delivery</h3>
+                <p>We deploy the solution and train your team for seamless integration.</p>
+            </div>
+        </div>
     </section>
     <section class="contact">
-      <h2>Contact</h2>
+      <h2>Get In Touch</h2>
       <p><strong>Email:</strong> <a href="mailto:vizence@vizencedata.com">vizence@vizencedata.com</a></p>
       <p><strong>Phone:</strong> <a href="tel:6026220976">(602) 622-0976</a></p>
     </section>
